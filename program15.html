@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>String & Math Operations</h1>
+    <input type="text" id="inputString" placeholder="Enter a string" />
+    <input type="text" id="inputNumber" placeholder="Enter a number" />
+    <button id="processButton">String & Math Operations</button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("processButton").onclick = function () {
+            const inputString = document.getElementById("inputString").value;
+            const inputNumber = parseFloat(document.getElementById("inputNumber").value);
+            const upperCaseString = inputString.toUpperCase();
+            const lowerCaseString = inputString.toLowerCase();
+            const sqrtOfNum = Math.sqrt(inputNumber);
+            const signOfNum = Math.sign(inputNumber);
+            document.getElementById("result").innerHTML = 
+                `<strong>String in uppercase:</strong> ${upperCaseString} <br> 
+                <strong>String in lowercase:</strong> ${lowerCaseString} <br> 
+                <strong>Square root of number:</strong> ${sqrtOfNum} <br> 
+                <strong>Sign of number (-1 for negative, 1 for positive, 0 for zero):</strong> ${signOfNum}`;
+        }
+    </script>
+</body>
+</html>
